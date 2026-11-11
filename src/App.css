@@ -1,3 +1,8 @@
+/* =====================================
+   CUATRO REYNAS EVENTOS
+   DISEÑO PREMIUM - NEGRO & DORADO
+===================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +14,7 @@ html {
 }
 
 body {
-  background: #090909;
+  background: #080808;
   color: #ffffff;
   font-family: Arial, sans-serif;
 }
@@ -17,72 +22,87 @@ body {
 .pagina {
   width: 100%;
   overflow: hidden;
-  background: #090909;
+  background: #080808;
 }
 
+/* =====================================
+   ENCABEZADO
+===================================== */
+
 .encabezado {
-  min-height: 100px;
-  padding: 20px 7%;
+  min-height: 115px;
+  padding: 15px 6%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 25px;
   flex-wrap: wrap;
-  gap: 20px;
-  background: #080808;
-  border-bottom: 1px solid #b9954b;
+  background: linear-gradient(180deg, #111111, #080808);
+  border-bottom: 1px solid #a9863d;
+  position: relative;
+  z-index: 10;
 }
 
-.logo {
-  text-align: center;
-}
-
-.logo span {
-  color: #d6b15b;
-  font-size: 28px;
-}
-
-.logo h1 {
-  color: #d6b15b;
-  font-size: 25px;
-  letter-spacing: 4px;
-}
-
-.logo p {
-  color: #ffffff;
-  font-size: 10px;
-  letter-spacing: 4px;
-  margin-top: 5px;
+.logo img {
+  display: block;
+  width: 220px;
+  height: auto;
+  object-fit: contain;
 }
 
 nav {
   display: flex;
-  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 nav a {
-  color: white;
+  color: #eeeeee;
   text-decoration: none;
   font-size: 12px;
+  font-weight: bold;
   letter-spacing: 2px;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #d6b15b;
+  color: #e0bd70;
 }
 
+.boton-reserva {
+  display: inline-block;
+  padding: 15px 22px;
+  color: #111111;
+  background: linear-gradient(135deg, #f3dda0, #bd9344);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.boton-reserva:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px #d6b15b55;
+}
+
+/* =====================================
+   PORTADA PRINCIPAL
+===================================== */
+
 .portada {
-  min-height: 85vh;
+  min-height: 88vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 10%;
+  padding: 80px 7%;
   overflow: hidden;
-  color: white;
-  background: #090909;
+  background: #080808;
 }
 
 .portada-video {
@@ -97,47 +117,274 @@ nav a:hover {
 .portada-capa {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.68),
+      rgba(0, 0, 0, 0.48),
+      rgba(0, 0, 0, 0.82)
+    );
   z-index: 1;
 }
 
 .portada-contenido {
   position: relative;
   z-index: 2;
+  width: 100%;
+  max-width: 1050px;
+  animation: aparecer 1.2s ease;
 }
 
-.portada-contenido {
-  max-width: 750px;
+.logo-portada {
+  width: min(390px, 75%);
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 20px;
+  filter: drop-shadow(0 5px 25px rgba(214, 177, 91, 0.18));
 }
+
+.frase-portada {
+  color: #e5c77e;
+  font-size: clamp(18px, 2.5vw, 25px);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 65px;
+}
+
+/* =====================================
+   SERVICIOS DE PORTADA
+===================================== */
+
+.portada-servicios {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 900px;
+  margin: auto;
+  border-top: 1px solid rgba(214, 177, 91, 0.55);
+  border-bottom: 1px solid rgba(214, 177, 91, 0.55);
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(5px);
+}
+
+.portada-servicio {
+  padding: 28px 15px;
+  transition: 0.3s;
+}
+
+.portada-servicio:not(:last-child) {
+  border-right: 1px solid rgba(214, 177, 91, 0.25);
+}
+
+.portada-servicio:hover {
+  background: rgba(214, 177, 91, 0.10);
+}
+
+.portada-servicio span {
+  display: block;
+  color: #dfbd70;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.portada-servicio h3 {
+  color: #ffffff;
+  font-size: 17px;
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+}
+
+.portada-servicio p {
+  color: #c6b994;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* =====================================
+   SUBTITULOS GENERALES
+===================================== */
 
 .subtitulo {
   color: #d6b15b;
-  letter-spacing: 4px;
   font-size: 12px;
-  margin-bottom: 20px;
   font-weight: bold;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
 }
 
-.portada h2 {
-  font-size: clamp(42px, 6vw, 75px);
-  line-height: 1.12;
+/* =====================================
+   SECCION SERVICIOS
+===================================== */
+
+.servicios {
+  padding: 115px 8%;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at top,
+      #19150d 0%,
+      #0b0b0b 65%
+    );
+}
+
+.servicios > h2,
+.galeria h2,
+.contacto h2 {
+  color: #ffffff;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.servicio {
+  padding: 55px 30px;
+  background: linear-gradient(145deg, #1b1b1b, #101010);
+  border: 1px solid #40341e;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.servicio:hover {
+  transform: translateY(-10px);
+  border-color: #d6b15b;
+  box-shadow: 0 15px 40px rgba(214, 177, 91, 0.10);
+}
+
+.icono {
+  color: #d6b15b;
+  font-size: 48px;
+  margin-bottom: 28px;
+}
+
+.servicio h3 {
+  color: #e4c477;
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.servicio p {
+  color: #c5c5c5;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* =====================================
+   GALERIA
+===================================== */
+
+.galeria {
+  padding: 115px 7%;
+  text-align: center;
+  background: #101010;
+  border-top: 1px solid #292218;
+  border-bottom: 1px solid #292218;
+}
+
+.galeria h2 {
+  margin-bottom: 20px;
+}
+
+.galeria-descripcion {
+  color: #bdbdbd;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.galeria-item {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #554321;
+  background: #181818;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.galeria-item:hover img {
+  transform: scale(1.10);
+}
+
+.galeria-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 22px;
+  text-align: left;
+  background: linear-gradient(
+    transparent 30%,
+    rgba(0, 0, 0, 0.88)
+  );
+  transition: 0.3s;
+}
+
+.galeria-overlay span {
+  color: #e0bd70;
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-bottom: 7px;
+}
+
+.galeria-overlay h3 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* =====================================
+   CONTACTO
+===================================== */
+
+.contacto {
+  padding: 120px 20px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at center,
+      #211b10 0%,
+      #090909 70%
+    );
+}
+
+.contacto h2 {
   margin-bottom: 25px;
 }
 
-.portada h2 span {
-  color: #d6b15b;
-}
-
-.portada-contenido > p:not(.subtitulo) {
-  color: #dddddd;
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 35px;
+.contacto > p:not(.subtitulo) {
+  color: #cccccc;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 40px;
 }
 
 .boton {
   display: inline-block;
-  padding: 17px 30px;
+  padding: 19px 35px;
   background: linear-gradient(135deg, #f0d58b, #b58a35);
   color: #090909;
   text-decoration: none;
@@ -153,187 +400,35 @@ nav a:hover {
   box-shadow: 0 8px 25px #b9954b55;
 }
 
-.servicios {
-  padding: 100px 8%;
-  text-align: center;
-}
-
-.servicios > h2,
-.galeria h2,
-.contacto h2 {
-  font-size: clamp(30px, 4vw, 45px);
-  margin-bottom: 50px;
-}
-
-.servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.servicio {
-  background: #151515;
-  border: 1px solid #39301e;
-  padding: 45px 25px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.servicio:hover {
-  border-color: #d6b15b;
-  transform: translateY(-8px);
-}
-
-.icono {
-  color: #d6b15b;
-  font-size: 45px;
-  margin-bottom: 25px;
-}
-
-.servicio h3 {
-  color: #d6b15b;
-  font-size: 22px;
-  margin-bottom: 18px;
-}
-
-.servicio p {
-  color: #cccccc;
-  line-height: 1.7;
-  font-size: 15px;
-}
-
-.galeria {
-  padding: 100px 8%;
-  text-align: center;
-  background: #121212;
-}
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 40px;
-}
-
-.galeria-item {
-  position: relative;
-  height: 220px;
-  overflow: hidden;
-  border-radius: 8px;
-  border: 1px solid #39301e;
-}
-
-.galeria-item img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.4s;
-}
-
-.galeria-item:hover img {
-  transform: scale(1.08);
-}
-
-.galeria-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 18px;
-  text-align: left;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
-}
-
-.galeria-overlay span {
-  color: #d6b15b;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.galeria-overlay h3 {
-  color: white;
-  font-size: 17px;
-  margin-top: 5px;
-}
-.galeria > p:last-child {
-  color: #cccccc;
-  font-size: 16px;
-}
-
-.contacto {
-  padding: 100px 20px;
-  text-align: center;
-  background: #090909;
-}
-
-.contacto > p:not(.subtitulo) {
-  color: #cccccc;
-  margin-bottom: 35px;
-  line-height: 1.7;
-}
+/* =====================================
+   PIE DE PAGINA
+===================================== */
 
 footer {
-  padding: 40px 20px;
+  padding: 55px 20px;
   text-align: center;
   background: #050505;
-  border-top: 1px solid #b9954b;
+  border-top: 1px solid #a9863d;
 }
 
 footer h2 {
-  color: #d6b15b;
-  letter-spacing: 4px;
-  margin-bottom: 10px;
+  color: #dfbd70;
+  font-size: 27px;
+  letter-spacing: 6px;
+  margin-bottom: 15px;
 }
 
 footer p {
   color: #aaaaaa;
-  font-size: 12px;
-  letter-spacing: 2px;
-  margin: 8px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin: 12px;
 }
 
-@media (max-width: 768px) {
-  .encabezado {
-    justify-content: center;
-  }
+/* =====================================
+   WHATSAPP FLOTANTE
+===================================== */
 
-  .galeria-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .galeria-item {
-    height: 160px;
-  }
-
-  nav {
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .portada {
-    min-height: 550px;
-    padding: 60px 7%;
-  }
-
-  .servicios-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .servicios,
-  .galeria,
-  .contacto {
-    padding: 70px 7%;
-  }
-}
-.logo img {
-  display: block;
-  width: 180px;
-  height: auto;
-  object-fit: contain;
-}
 .whatsapp-flotante {
   position: fixed;
   right: 25px;
@@ -362,7 +457,174 @@ footer p {
   height: 36px;
 }
 
-@media (max-width: 600px) {
+/* =====================================
+   ANIMACIONES
+===================================== */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================
+   TABLETS
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .encabezado {
+    justify-content: center;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .servicios-grid {
+    gap: 15px;
+  }
+
+  .portada {
+    min-height: 750px;
+  }
+}
+
+/* =====================================
+   CELULARES
+===================================== */
+
+@media (max-width: 768px) {
+
+  .encabezado {
+    padding: 20px 5%;
+    gap: 20px;
+  }
+
+  .logo img {
+    width: 155px;
+  }
+
+  nav {
+    gap: 17px;
+  }
+
+  nav a {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .boton-reserva {
+    font-size: 10px;
+    padding: 13px 18px;
+  }
+
+  .portada {
+    min-height: 750px;
+    padding: 70px 5%;
+  }
+
+  .logo-portada {
+    width: min(310px, 85%);
+  }
+
+  .frase-portada {
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+  }
+
+  .portada-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portada-servicio {
+    padding: 22px 10px;
+  }
+
+  .portada-servicio:nth-child(2) {
+    border-right: none;
+  }
+
+  .portada-servicio:nth-child(1),
+  .portada-servicio:nth-child(2) {
+    border-bottom: 1px solid rgba(214, 177, 91, 0.25);
+  }
+
+  .servicios,
+  .galeria {
+    padding: 80px 6%;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .galeria-item {
+    height: 180px;
+  }
+
+  .galeria-overlay {
+    padding: 12px;
+  }
+
+  .galeria-overlay h3 {
+    font-size: 14px;
+  }
+
+  .galeria-overlay span {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .contacto {
+    padding: 85px 7%;
+  }
+
+  .contacto h2 {
+    font-size: 32px;
+  }
+}
+
+/* =====================================
+   CELULARES PEQUEÑOS
+===================================== */
+
+@media (max-width: 400px) {
+
+  .logo img {
+    width: 135px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 9px;
+  }
+
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-item {
+    height: 230px;
+  }
+
   .whatsapp-flotante {
     right: 18px;
     bottom: 18px;
@@ -375,4 +637,254 @@ footer p {
     height: 32px;
   }
 }
- 
+/* DESPLEGABLE DE MEDIDAS DE CARPAS */
+
+.servicio-interactivo {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  color: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.servicio-interactivo:focus-visible,
+.medidas-carpa button:focus-visible {
+  outline: 2px solid #d6b15b;
+  outline-offset: 4px;
+}
+
+.flecha-carpa {
+  display: block;
+  margin-top: 18px;
+  color: #d6b15b;
+  font-weight: bold;
+}
+
+.carpas-desplegable {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 30px 20px;
+  margin-top: 10px;
+  background: #151515;
+  border: 1px solid #d6b15b;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.carpas-desplegable h3 {
+  color: #d6b15b;
+  margin-bottom: 22px;
+}
+
+.medidas-carpa {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.medidas-carpa button {
+  padding: 14px 22px;
+  background: #090909;
+  color: white;
+  border: 1px solid #d6b15b;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.medidas-carpa button:hover,
+.medidas-carpa button.medida-activa {
+  background: #d6b15b;
+  color: #090909;
+}
+
+.foto-carpa {
+  margin-top: 30px;
+}
+
+.foto-carpa h3 {
+  margin-bottom: 20px;
+}
+
+.foto-carpa img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  max-height: 600px;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .carpas-desplegable {
+    padding: 25px 12px;
+  }
+
+  .medidas-carpa {
+    flex-direction: column;
+  }
+
+  .medidas-carpa button {
+    width: 100%;
+  }
+}
+.lista-carpas {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.modelo-carpa {
+  padding: 16px;
+  border: 1px solid #c5a044;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.modelo-carpa h4 {
+  color: #d6b45c;
+  margin-bottom: 12px;
+}
+
+.modelo-carpa summary {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 22px;
+  background: #c5a044;
+  color: #111;
+  font-weight: bold;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.modelo-carpa summary::-webkit-details-marker {
+  display: none;
+}
+
+.fotos-modelo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.fotos-modelo img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* GALERÍA DE MODELOS DE CARPAS */
+
+.fotos-modelo {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.fotos-modelo img {
+  display: block;
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  object-position: center;
+  background: #111;
+  border-radius: 8px;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+  .fotos-modelo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .fotos-modelo img {
+    height: 115px;
+  }
+}
+/* BOTONES DE LAS FOTOGRAFÍAS */
+
+.foto-modelo-boton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.foto-modelo-boton img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.foto-modelo-boton:hover img {
+  transform: scale(1.06);
+}
+
+/* VENTANA DE FOTO AMPLIADA */
+
+.visor-foto {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 20px 20px;
+}
+
+.visor-foto img {
+  display: block;
+  max-width: 95%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.cerrar-foto {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #d6b45c;
+  border-radius: 50%;
+  background: #c5a044;
+  color: #111;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cerrar-foto:hover {
+  background: #fff;
+}
+.boton-ubicacion {
+  margin-top: 18px;
+  margin-left: 10px;
+  border: 1px solid #d6b15b;
+}
+
+.boton-ubicacion:hover {
+  background: #ffffff;
+  color: #111111;
+}
